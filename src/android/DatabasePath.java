@@ -17,8 +17,10 @@ import org.json.JSONException;
 
 import android.content.Intent;
 import android.net.Uri;
-
+import android.content.Context;
 import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaInterface;
+
 
 public class DatabasePath extends CordovaPlugin {
 
