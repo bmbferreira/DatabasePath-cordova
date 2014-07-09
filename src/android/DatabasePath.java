@@ -6,7 +6,7 @@
  * Copyright (c) 2011, IBM Corporation
  */
 
-package com.phonegap.plugins.fileopener;
+package com.phonegap.plugins.databasepath;
 
 import java.io.IOException;
 import java.net.URLConnection;
@@ -20,7 +20,7 @@ import android.net.Uri;
 
 import org.apache.cordova.CordovaPlugin;
 
-public class FileOpener extends CordovaPlugin {
+public class DatabasePath extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
