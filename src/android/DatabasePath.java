@@ -33,9 +33,6 @@ public class DatabasePath extends CordovaPlugin {
                 callbackContext.success(databasePath);
                 return true;
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-            callbackContext.error(e.getMessage());
         } catch (RuntimeException e) {  // KLUDGE for Activity Not Found
             e.printStackTrace();
             callbackContext.error(e.getMessage());
