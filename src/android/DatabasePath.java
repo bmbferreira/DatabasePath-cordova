@@ -30,7 +30,7 @@ public class DatabasePath extends CordovaPlugin {
         try {
             if (action.equals("getDatabasePath")) {
 		//String databasePath = this.cordova.getActivity().getApplicationContext().getDir("database", Context.MODE_PRIVATE).getPath();
-                String databasePath = this.cordova.getActivity().getDatabasePath("ClinidataPHR_DB").getAbsolutePath()
+                String databasePath = this.cordova.getActivity().getDatabasePath("ClinidataPHR_DB").getAbsolutePath();
                 callbackContext.success(databasePath);
                 return true;
             }
