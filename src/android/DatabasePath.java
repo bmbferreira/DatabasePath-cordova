@@ -18,6 +18,7 @@ import org.json.JSONException;
 import android.content.Intent;
 import android.net.Uri;
 import android.content.Context;
+import android.os.Build;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaInterface;
 
@@ -30,7 +31,13 @@ public class DatabasePath extends CordovaPlugin {
         try {
             if (action.equals("getDatabasePath")) {
 		//String databasePath = this.cordova.getActivity().getApplicationContext().getDir("database", Context.MODE_PRIVATE).getPath();
-                String databasePath = this.cordova.getActivity().getDatabasePath("ClinidataPHR_DB").getAbsolutePath();
+                //String databasePath = this.cordova.getActivity().getDatabasePath("ClinidataPHR_DB").getAbsolutePath();
+                String databasePath = this.getSettings().
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+                    return "TODO";		
+		}else{
+		    return "file:///data/data/"+webView.getContext().getPackageName()+"/app_webview_databases/file__0/1";
+		}
                 callbackContext.success(databasePath);
                 return true;
             }
