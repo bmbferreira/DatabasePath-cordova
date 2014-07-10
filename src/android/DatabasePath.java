@@ -32,11 +32,11 @@ public class DatabasePath extends CordovaPlugin {
             if (action.equals("getDatabasePath")) {
 		//String databasePath = this.cordova.getActivity().getApplicationContext().getDir("database", Context.MODE_PRIVATE).getPath();
                 //String databasePath = this.cordova.getActivity().getDatabasePath("ClinidataPHR_DB").getAbsolutePath();
-                String databasePath = this.getSettings().
+                String databasePath = "";
                 if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
-                    return "TODO";		
+                    databasePath = "TODO";		
 		}else{
-		    return "file:///data/data/"+webView.getContext().getPackageName()+"/app_webview_databases/file__0/1";
+		    databasePath = "file:///data/data/"+webView.getContext().getPackageName()+"/app_webview_databases/file__0/1";
 		}
                 callbackContext.success(databasePath);
                 return true;
