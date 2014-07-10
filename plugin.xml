@@ -9,7 +9,7 @@
         <engine name="cordova" version=">=3.0.0" />
     </engines>  
 
-    <name>File Opener</name>
+    <name>Database Path</name>
 
     <js-module src="www/databasepath.js" name="DatabasePath">
         <clobbers target="window.plugins.databasepath" />
